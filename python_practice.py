@@ -15,3 +15,11 @@ def search(name):
         print("查无此人")
 
 search("输入通讯录名字查询")
+
+# DAY23小项目：成绩统计
+scores = [85,92,78,95,88]
+total = 0
+for s in scores:
+    total =total + s
+print("平均分:", total / len(scores))
+print("最高分:", max(scores))
