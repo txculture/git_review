@@ -23,3 +23,15 @@ for s in scores:
     total =total + s
 print("平均分:", total / len(scores))
 print("最高分:", max(scores))
+
+#DAY 24 小项目：BMI计算器
+height = float(input("请输入身高(米):"))
+weight = float(input("请输入体重(公斤):"))
+bmi = weight / (height ** 2)
+print("BMI:",bmi)
+if bmi < 18.5:
+    print("偏瘦")
+elif bmi < 24:
+    print("正常")
+else:
+    print("偏胖")
