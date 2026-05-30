@@ -35,3 +35,20 @@ elif bmi < 24:
     print("正常")
 else:
     print("偏胖")
+
+#Day 25小项目：随机猜数字
+import random
+secret = random.randint(1,100)
+guess = 0
+count = 0
+print("猜一个1-100的数字:")
+while guess =! secret:
+    guess = int(input("猜一个数字"))
+    count = count + 1
+    if guess > secret:
+        print("太大了")
+    elif guess < secret:
+        print("太小了")
+    else:
+        print("答对了")
+        print("你猜了:", count, "次")
