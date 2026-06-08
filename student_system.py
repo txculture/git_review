@@ -96,5 +96,30 @@ def main():
             break
         else:
             print("输入错误，请重新选择！")
-
 main()
+
+import math
+def get_number():
+    while True:
+        try:
+            num = int(input("数字:")))
+            return num
+        except ValueError:
+            print("输入错误")
+def main():
+    while True:
+        print("1.倍数")
+        print("2.平方")
+        print("3.退出")
+        print("4.开平方根")
+        choice = input("请选择:")
+        if choice == "1":
+            num = int(input("数字:"))
+            print("结果是:", num * 2)
+        elif choice == "2":
+            print("结果是:", math.pow(num, 2))
+        elif choice == "4":
+            print("结果是:", math.sqrt(num))
+        elif choice == "3":
+            print("退出")
+            break
