@@ -102,7 +102,7 @@ import math
 def get_number():
     while True:
         try:
-            num = int(input("数字:")))
+            num = int(input("数字:"))
             return num
         except ValueError:
             print("输入错误")
