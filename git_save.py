@@ -7,3 +7,5 @@ def git_save():
     os.system(f'git commit -m "{message}"')
     os.system("git push")
     print(f" {filename}.py 已提交并推送到 GitHub")
+
+git_save()
