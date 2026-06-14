@@ -1,3 +1,17 @@
+from openpyxl import Workbook
+def export_excel(students):
+    if len(students) == 0:
+        print('没有数据可导出')
+        return
+    wb = Workbook()
+    ws = wb.active
+    ws.title = "学生成绩"
+    ws.append(['姓名', '成绩'])
+    for name, score in students.items():
+        ws.append([name, score])
+    wb.save('学生成绩.xlsx')
+    print('已导出到 学生成绩.xlsx')
+
 def add_student(students):
     try:
         name = input("请输入学生姓名：")
@@ -72,8 +86,9 @@ def main():
         print("4. 计算平均分")
         print("5. 保存到文件")
         print("6. 从文件读取")
-        print("7. 退出系统")
+        print("0. 退出系统")
         print("8.删除学生成绩")
+        print("7.导出学生成绩")
         
         choice = input("请选择功能（1-7）：")
         
@@ -89,9 +104,11 @@ def main():
             save_to_file(students)
         elif choice == "6":
             students = load_from_file()
+        elif choice == "7":
+            export_excel(students)
         elif choice == "8":
             delete_student(students)
-        elif choice == "7":
+        elif choice == "0":
             print("谢谢使用，再见！")
             break
         else:
