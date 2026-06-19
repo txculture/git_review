@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>个人简历</title>
+    <style>
+        /* 页面背景 */
+        body {
+            background: #f5f7fa;
+        }
+
+        /* 简历卡片容器 */
+        #container {
+            width: 700px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 30px 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px #00000014
+        }
+
+        /* 主标题 */
+        h1 {
+            color: #1a2a6c;
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 4px;
+        }
+
+        /* 副标题 */
+        .subtitle {
+            color: #666;
+            text-align: center;
+            font-size: 15px;
+            margin-top: 0;
+        }
+
+        /* 分割线 */
+        hr {
+            border: none;
+            border-top: 2px dashed #ddd;
+            margin: 20px 0;
+        }
+
+        /* 项目卡片 */
+        .project {
+            border-left: 4px solid hsl(217, 91%, 60%);
+            padding-left: 16px;
+            margin-bottom: 18px;
+            flex: 1;
+        }
+
+        .project h3 {
+            margin-bottom: 4px;
+            color: #1a2a6c;
+        }
+
+        .project p {
+            margin-top: 0;
+            color: #444;
+        }
+
+        /* 页脚 */
+        .footer {
+            border-top: 1px solid #eee;
+            padding-top: 16px;
+            margin-top: 24px;
+            text-align: center;
+            color: #999;
+            font-size: 13px;
+        }
+        /* 项目列表横排 */
+        .project-list {
+            display: flex;
+            gap: 20px;
+        }
+    </style>
+
+    <head>
+
+    <body>
+        <div id="container">
+            <div id="header">
+                <h1>康义</h1>
+                <p class="subtitle">全栈开发初学者</p>
+                <hr>
+            </div>
+            <div class="section">
+                <h2>技能</h2>
+                <ul>
+                    <li>GitHub:分支管理、远程协作、版本退回</li>
+                    <li>Python:变量、循环、函数、文件读写、异常处理</li>
+                    <li>HTML:表格、表单、div、布局</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h2>项目经验</h2>
+                <!--项目的横排盒子-->
+                <div class="project-list">
+                    <div class="project">
+                        <h3>个人博客</h3>
+                        <p>使用GitHub pages 部署，记录学习笔记</p>
+                    </div>
+                    <div class="project">
+                        <h3>自动化设备</h3>
+                        <p>Python脚本每日备份文件夹到Git仓库。</p>
+                    </div>
+                    <div class="project">
+                        <h3>网站检查器</h3>
+                        <p>用requests定时检测网站是否在线,异常时邮件提醒</p>
+                    </div>
+                </div>
+                <p class="footer">© 2026 张三 · 持续学习中 </p>
+            </div>
+    </body>
+
+</html>
