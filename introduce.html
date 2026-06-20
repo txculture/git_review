@@ -7,6 +7,7 @@
     <style>
         /* 页面背景 */
         body {
+            padding: 20px;
             background: #f5f7fa;
         }
 
@@ -48,7 +49,10 @@
             border-left: 4px solid hsl(217, 91%, 60%);
             padding-left: 16px;
             margin-bottom: 18px;
-            flex: 1;
+            flex: 1; /* 允许项目卡片在行内扩展，最小宽度150px */
+            min-width: 150px;
+            max-width: 300px;
+             /* 设置项目卡片的最大宽度，防止过宽 */
         }
 
         .project h3 {
@@ -74,6 +78,10 @@
         .project-list {
             display: flex;
             gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 12px;
+            align-items: stretch; /* 让项目卡片在行内等高 */
+            justify-content: space-between; /* 在行内均匀分布项目卡片 */
         }
     </style>
 
@@ -109,6 +117,26 @@
                     <div class="project">
                         <h3>网站检查器</h3>
                         <p>用requests定时检测网站是否在线,异常时邮件提醒</p>
+                    </div>
+                    <div class="project">
+                        <h3>项目4</h3>
+                        <p>这是一行内容</p>
+                    </div>
+                    <div class="project">
+                        <h3>项目5</h3>
+                        <p>这是两行内容，这是两行内容</p>
+                    </div>
+                    <div class="project">
+                        <h3>项目6</h3>
+                        <p>这是三行内容，这是三行内容，这是三行内容，</p>
+                    </div>
+                    <div class="project">
+                        <h3>项目7</h3>
+                        <p>这是四行内容，这是四行内容，这是四行内容，这是四行内容</p>
+                    </div>
+                    <div class="project">
+                        <h3>项目8</h3>
+                        <p>这是五行内容，这是五行内容，这是五行内容，这是五行内容，这是五行内容这是五行内容，这是五行内容，这是五行内容，这是五行内容，这是五行内容 </p>
                     </div>
                 </div>
                 <p class="footer">© 2026 张三 · 持续学习中 </p>
